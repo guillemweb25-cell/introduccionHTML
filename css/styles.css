@@ -1,0 +1,184 @@
+/* ---------- Variables de tema ---------- */
+:root {
+  --bg: #0f1115;
+  --fg: #e6edf3;
+  --muted: #a9b1bb;
+  --border: #2b2f36;
+  --chip-shadow: 0 0 0 2px rgba(255,255,255,0.06) inset;
+
+  /* Colores por módulo */
+  --serveis: #20c997;          /* verde */
+  --sox: #ff9f43;              /* naranja */
+  --sostenibilitat: #5eead4;   /* turquesa */
+  --aplicacions-web: #639bff;  /* azul */
+  --ipo2: #ec4899;             /* rosa */
+  --seguretat: #f87171;        /* rojo suave */
+  --projecte: #84cc16;         /* lima */
+  --programacio: #a5b4fc;      /* índigo claro */
+  --pati: #94a3b8;             /* gris azulado */
+}
+
+/* ---------- Reset mínimo ---------- */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 24px;
+  font: 16px/1.45 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Noto Sans", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: var(--bg);
+  color: var(--fg);
+}
+
+/* ---------- Título ---------- */
+h1 {
+  font-weight: 700;
+  letter-spacing: .2px;
+  margin: 0 0 16px;
+}
+
+/* ---------- Tabla de horario ---------- */
+.schedule {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #12151c;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.schedule th,
+.schedule td {
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 14px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.schedule thead th {
+  position: sticky;
+  top: 0;
+  background: #141823;
+  z-index: 2;
+  font-weight: 700;
+}
+
+.schedule .col-time {
+  width: 10rem;
+  text-align: left;
+}
+
+.schedule tbody th[scope="row"] {
+  position: sticky;
+  left: 0;
+  text-align: left;
+  background: #141823;
+  z-index: 1;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+
+/* Quitar borde extra al último col/row */
+.schedule tr > *:last-child { border-right: 0; }
+.schedule tr:last-child > * { border-bottom: 0; }
+
+/* ---------- Celdas de módulo ---------- */
+.mod {
+  font-weight: 600;
+  letter-spacing: .2px;
+  border-left: 4px solid transparent;
+  border-radius: 8px;
+}
+
+.mod[data-mod] {
+  background: rgba(255,255,255,0.02);
+}
+
+/* Colores por módulo */
+.mod[data-mod="serveis"] {
+  background-color: #1a3d33;
+  border-left-color: var(--serveis);
+}
+.mod[data-mod="sox"] {
+  background-color: #3d2b14;
+  border-left-color: var(--sox);
+}
+.mod[data-mod="sostenibilitat"] {
+  background-color: #123d38;
+  border-left-color: var(--sostenibilitat);
+}
+.mod[data-mod="aplicacions-web"] {
+  background-color: #12263f;
+  border-left-color: var(--aplicacions-web);
+}
+.mod[data-mod="ipo2"] {
+  background-color: #3d1a30;
+  border-left-color: var(--ipo2);
+}
+.mod[data-mod="seguretat"] {
+  background-color: #3d1a1a;
+  border-left-color: var(--seguretat);
+}
+.mod[data-mod="projecte"] {
+  background-color: #2d3d12;
+  border-left-color: var(--projecte);
+}
+.mod[data-mod="programacio"] {
+  background-color: #2a2740;
+  border-left-color: var(--programacio);
+}
+.mod[data-mod="pati"] {
+  background-color: #2c323c;
+  border-left-color: var(--pati);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+}
+
+/* Hover */
+.schedule td.mod:hover {
+  outline: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.03) inset;
+}
+
+/* ---------- Leyenda ---------- */
+.legend {
+  margin: 14px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 8px 16px;
+  list-style: none;
+  color: var(--muted);
+}
+.legend .chip {
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  margin-right: .5em;
+  border-radius: 6px;
+  vertical-align: -2px;
+  box-shadow: var(--chip-shadow);
+}
+.chip[data-mod="serveis"]         { background: var(--serveis); }
+.chip[data-mod="sox"]             { background: var(--sox); }
+.chip[data-mod="sostenibilitat"]  { background: var(--sostenibilitat); }
+.chip[data-mod="aplicacions-web"] { background: var(--aplicacions-web); }
+.chip[data-mod="ipo2"]            { background: var(--ipo2); }
+.chip[data-mod="seguretat"]       { background: var(--seguretat); }
+.chip[data-mod="projecte"]        { background: var(--projecte); }
+.chip[data-mod="programacio"]     { background: var(--programacio); }
+.chip[data-mod="pati"]            { background: var(--pati); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 820px) {
+  body { margin: 16px; }
+  .schedule {
+    display: block;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .schedule th, .schedule td { padding: 10px 12px; }
+  .schedule .col-time { width: 8.5rem; }
+  h1 { font-size: 1.25rem; }
+}

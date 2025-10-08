@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Horario SMX</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <h1>Horario SMX (tarde)</h1>
+
+  <table class="schedule" role="table" aria-label="Horario semanal SMX">
+    <thead>
+      <tr>
+        <th class="col-time" scope="col">&nbsp;</th>
+        <th class="day day-lunes" scope="col">Lunes</th>
+        <th class="day day-martes" scope="col">Martes</th>
+        <th class="day day-miercoles" scope="col">Miércoles</th>
+        <th class="day day-jueves" scope="col">Jueves</th>
+        <th class="day day-viernes" scope="col">Viernes</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <th class="hour hour-1500" scope="row">15:00–15:55</th>
+        <td class="mod mod-serveis" data-mod="serveis" rowspan="2">Serveis</td>
+        <td class="mod mod-sox" data-mod="sox" rowspan="2">SOX</td>
+        <td class="mod mod-sostenibilitat" data-mod="sostenibilitat">Sostenibilitat</td>
+        <td class="mod mod-aplicacions-web" data-mod="aplicacions-web" rowspan="3">Aplicacions Web</td>
+        <td class="mod mod-aplicacions-web" data-mod="aplicacions-web" rowspan="2">Aplicacions Web</td>
+      </tr>
+
+      <tr>
+        <th class="hour hour-1555" scope="row">15:55–16:50</th>
+        <td class="mod mod-seguretat" data-mod="seguretat" rowspan="2">Seguretat</td>
+      </tr>
+
+      <tr>
+        <th class="hour hour-1650" scope="row">16:50–17:45</th>
+        <td class="mod mod-seguretat" data-mod="seguretat">Seguretat</td>
+        <td class="mod mod-serveis" data-mod="serveis">Serveis</td>
+        <td class="mod mod-ipo2" data-mod="ipo2">IPO 2</td>
+      </tr>
+
+      <tr>
+        <th class="hour hour-1745" scope="row">17:45–18:15</th>
+        <td class="break mod mod-pati" data-mod="pati" colspan="5">Pati</td>
+      </tr>
+
+      <tr>
+        <th class="hour hour-1815" scope="row">18:15–19:10</th>
+        <td class="mod mod-seguretat" data-mod="seguretat">Seguretat</td>
+        <td class="mod mod-serveis" data-mod="serveis">Serveis</td>
+        <td class="mod mod-seguretat" data-mod="seguretat">Seguretat</td>
+        <td class="mod mod-serveis" data-mod="serveis" rowspan="3">Serveis</td>
+        <td class="mod mod-sox" data-mod="sox" rowspan="3">SOX</td>
+      </tr>
+
+      <tr>
+        <th class="hour hour-1910" scope="row">19:10–20:05</th>
+        <td class="mod mod-projecte" data-mod="projecte" rowspan="2">Projecte intermodular</td>
+        <td class="mod mod-programacio" data-mod="programacio" rowspan="2">Programació</td>
+        <td class="mod mod-sox" data-mod="sox" rowspan="2">SOX</td>
+      </tr>
+
+      <tr>
+        <th class="hour hour-2005" scope="row">20:05–21:00</th>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- (Opcional) Leyenda de módulos -->
+  <ul class="legend">
+    <li><span class="chip" data-mod="serveis"></span> Serveis</li>
+    <li><span class="chip" data-mod="sox"></span> SOX</li>
+    <li><span class="chip" data-mod="sostenibilitat"></span> Sostenibilitat</li>
+    <li><span class="chip" data-mod="aplicacions-web"></span> Aplicacions Web</li>
+    <li><span class="chip" data-mod="ipo2"></span> IPO 2</li>
+    <li><span class="chip" data-mod="seguretat"></span> Seguretat</li>
+    <li><span class="chip" data-mod="projecte"></span> Projecte intermodular</li>
+    <li><span class="chip" data-mod="programacio"></span> Programació</li>
+    <li><span class="chip" data-mod="pati"></span> Pati</li>
+  </ul>
+
+</body>
+</html>
