@@ -1,0 +1,73 @@
+body {
+  background-color: lightblue;   /* Fondo de toda la página */
+}
+
+table {
+  background-color: white;       /* Fondo de la tabla */
+  border-collapse: collapse;     /* Une los bordes */
+  width: 80%;                    /* Más ancho y centrado */
+  margin: auto;
+}
+
+/* Bordes con CSS en lugar de border="1" */
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+
+/* Fondo para los encabezados */
+th {
+  background-color: lightcoral;
+  color: white;
+  font-weight: bold;
+}
+
+.hora {
+  background-color: #f0f0f0;   /* Gris claro */
+  color: #003366;              /* Azul grisáceo */
+  font-weight: bold;
+  text-align: center;          /* Centra el texto dentro de la celda */
+  width: 120px;
+}
+/* Celda del patio (recreo) */
+.patio {
+  background-color: #fff3cd;   /* Amarillo suave */
+  color: #665200;              /* Marrón oscuro para el texto */
+  font-weight: bold;
+  text-transform: uppercase;   /* Todo en mayúsculas */
+  text-align: center;          /* Centrado horizontalmente */
+}
+
+/* 🎨 Colores por módulo */
+.servicios {
+  background-color: #cce5ff;   /* Azul claro */
+}
+
+.sox {
+  background-color: #d4edda;   /* Verde claro */
+}
+
+.sostenibilidad {
+  background-color: #f8d7da;   /* Rosa claro */
+}
+
+.web {
+  background-color: #e2e3e5;   /* Gris suave */
+}
+
+.seguridad {
+  background-color: #fde2cf;   /* Naranja muy suave */
+}
+
+.ipo {
+  background-color: #e0bbff;   /* Lila claro */
+}
+
+.proyecto {
+  background-color: #fff0b3;   /* Amarillo claro */
+}
+
+.programacion {
+  background-color: #d1ecf1;   /* Cian suave */
+}
