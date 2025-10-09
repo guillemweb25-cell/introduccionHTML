@@ -1,0 +1,62 @@
+body{
+    background-color: #6ed9e7;
+}
+
+
+h1{
+    text-align: center;
+    color: rgb(185, 122, 4);
+}
+
+
+table{
+    background-color: #ffffff;
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+th,td{
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+th{
+    background-color: #0b343a;
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+    border: 1px solid white;
+}
+
+.hora{
+    background-color: #f0f0f0;
+    color:#665200;
+    font-weight: bold;
+    width: 120px;
+}
+
+.patio{
+    background-color:#fff3cd ;
+    color: #665200 ;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.servicios{
+    background-color: #cce5ff;   /* Azul claro */
+}
+
+.seguridad {
+  background-color: #fde2cf;   /* Naranja muy suave */
+}
+
+.sistemas{
+  background-color: #d4edda;   /* Verde claro */
+}
+
+.web {
+  background-color: #e2e3e5;   /* Gris suave */
+}
