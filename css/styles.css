@@ -60,3 +60,29 @@ th{
 .web {
   background-color: #e2e3e5;   /* Gris suave */
 }
+
+.leyenda{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.leyenda h3{
+    text-align: center;
+}
+
+.leyenda ul{
+    list-style-type: none;
+    padding-left: 0;       /* Elimina el sangrado izquierdo */
+    margin: 0 auto;
+    text-align: center;  
+}
+
+.leyenda li {
+    display: inline-block;
+    margin: 0 15px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+

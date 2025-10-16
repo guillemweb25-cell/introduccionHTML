@@ -1,0 +1,27 @@
+/* Snippet moderno de Paul Irish */
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #f9fafb;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.hero {
+  background: #bae6fd; /* azul suave */
+  width: 450px;
+  height: 150px;
+  margin: 40px auto;
+  padding: 5px;
+  border: 10px solid red;
+  margin: 40px auto;
+}
