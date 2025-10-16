@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #1083cf;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+h1,
+h2 {
+    color: red;
+}
+
+header h2 {
+    color: blue;
+}
+
+header>h2 {
+    /*només afecta als childs*/
+    color: green;
+}
+
+#main {
+    color: brown;
+}
+
+#main h3 {
+    color: blueviolet;
+}
+
+input {
+    color: inherit;
+}
+
+input[type="text"] {
+    color: #aa2345;
+}
+
+span:hover {
+    color: #561c0a;
+    background-color: bisque;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 5px;
+    border: 3px solid brown;
+}
