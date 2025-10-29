@@ -1,0 +1,55 @@
+:root{
+    --main-color:rgb(91, 91, 243);
+    --second-color:#fa7878;
+}
+
+html{
+    box-sizing: border-box;
+}
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+
+/*GLOBALES*/
+a{
+    text-decoration: none;
+    color: #000;
+    display: block;
+}
+
+
+h1{
+    text-align: center;
+    color: #2c2b2b;
+}
+
+h2{
+    text-align: center;
+}
+
+span{
+    color: green;
+}
+
+/*CSS PROPIOS*/
+h1 span{
+    color: var(--main-color)
+}
+
+h2 span{
+    color: var(--second-color);
+}
+.nav-main {
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    
+    padding: 15px 0px;
+}
+
+a{
+    text-transform: uppercase;
+}
+
+a{
+    text-transform: lowercase;
+}
