@@ -1,39 +1,43 @@
-:root{
-  --bg:#061434; 
-  --bg-clear:#05194a; 
-  --card:#111827; 
-  --muted:#94a3b8; 
-  --gris:#94a3b8;
-  --text:#e5e7eb;
-  --accent:#22d3ee; 
-  --accent-2:#a78bfa; 
-  --container:1100px;
-  --radius:16px; 
-  --shadow:0 10px 30px rgba(0,0,0,.25);
+:root {
+    --bg: #061434;
+    --bg-clear: #05194a;
+    --card: #111827;
+    --muted: #94a3b8;
+    --gris: #94a3b8;
+    --text: #e5e7eb;
+    --accent: #22d3ee;
+    --accent-2: #a78bfa;
+    --container: 1100px;
+    --radius: 16px;
+    --shadow: 0 10px 30px rgba(0, 0, 0, .25);
 }
 
 /* Snippet moderno de Paul Irish */
 html {
-  box-sizing: border-box;
-  font-size: 62.5%; /* Esto establece 1rem = 10px */
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* Esto establece 1rem = 10px */
 
 }
 
-*, *::before, *::after {
-  box-sizing: inherit;
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
 }
 
 
-body{
+body {
     background-color: var(--bg-clear);
     color: var(--gris);
     margin: 0px;
     padding: 0px;
-    font-size: 1.6rem; /* Esto establece el tamaño de fuente en 16px */
+    font-size: 1.6rem;
+    /* Esto establece el tamaño de fuente en 16px */
 
 }
 
-#encabezado{
+#encabezado {
     background-color: var(--bg);
 }
 
@@ -43,46 +47,82 @@ header {
 }
 
 h1 {
-    font-size: 3.8rem; /* Tamaño de 38px */
-    color: var(--text); /* Color personalizado */
+    font-size: 3.8rem;
+    /* Tamaño de 38px */
+    color: var(--text);
+    /* Color personalizado */
 }
+
 h2 {
-    font-size: 2rem; /* 20 píxeles */
+    font-size: 2rem;
+    /* 20 píxeles */
 }
 
 h3 {
-    font-size: 1.8rem; /* 18 píxeles */
+    font-size: 1.8rem;
+    /* 18 píxeles */
 }
 
-header{
+header {
     display: flex;
+    flex-direction: column;
 }
 
-.logo{
-    width: 25%;
+.logo {
+    width: 100%;
 }
-nav{
-    width: 75%;
+
+nav {
+    width: 100%;
 }
+
+@media (min-width: 1000px) {
+    header {
+        flex-direction: row;
+        /* justify-content: space-between; */
+    }
+
+    .logo {
+        width: 25%;
+    }
+
+    nav {
+        width: 75%;
+    }
+}
+
+
+
 ul {
-  list-style-type: none;
-  padding: 0; /* Opcional, para eliminar el espacio por defecto */
-  margin: 0;  /* Opcional, si quieres eliminar también el margen */
+    list-style-type: none;
+    padding: 0;
+    /* Opcional, para eliminar el espacio por defecto */
+    margin: 0;
+    /* Opcional, si quieres eliminar también el margen */
 }
 
-.contenedor{
+.contenedor {
     width: 70%;
     margin: 0 auto;
 }
+
 nav ul{
     display: flex;
-    flex-direction: row;
-    justify-content: end;
-    padding-top: 50px;
-
+    flex-direction: column;
+    width: 100%;
 }
 
-nav ul li{
+@media (min-width: 1000px) {
+
+    nav ul {
+        flex-direction: row;
+        justify-content: end;
+        padding-top: 50px;
+    }
+}
+
+
+nav ul li {
     background-color: green;
     width: 150px;
     padding: 3px;
@@ -90,6 +130,6 @@ nav ul li{
     border: 2px solid white;
 }
 
-nav ul li a{
+nav ul li a {
     color: white;
 }
