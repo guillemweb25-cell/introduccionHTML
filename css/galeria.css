@@ -1,30 +1,87 @@
-:root{
-    --main-color:rgb(91, 91, 243);
-    --second-color:#fa7878;
+:root {
+    --main-color: rgb(91, 91, 243);
+    --second-color: #fa7878;
 }
 
-html{
+html {
     box-sizing: border-box;
-    font-size: 62.5%; /*1rem 10px*/
+    font-size: 62.5%;
+    /*1rem 10px*/
 
 }
-*,*:before,*:after{
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
-body{
+body {
     font-family: "Raleway", sans-serif;
     font-size: 1.6rem;
 }
-h1,h2,h3{
+
+h1,
+h2,
+h3 {
     font-family: "Robot", sans-serif;
 
 }
 
+h1 {
+    font-size: 6rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 /*GENERICOS*/
-#galeria img{
-    width:200px;
-    height: 200px;
+#galeria { 
+    padding: 0 1rem; 
+    max-width: 1400px;   /* límite visual */
+    margin: 0 auto;      /* centra el contenedor */
+    padding: 0 1rem;
+
+}
+
+
+#galeria img {
+    width: 90%;
+    height: auto;
+    aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 5px;
+    display: block;
+    margin: 1rem auto;
+    max-width: 600px;
 }
+
+/* Móvil: 1 columna (ya lo tienes) */
+
+/* Tablet: 2 columnas */
+@media (min-width: 768px){
+    #galeria img{
+        display: inline-block;
+        width: 47%;       /* dos imágenes por fila */
+        max-width: none;
+        margin: 1%;
+        vertical-align: top;
+    }
+}
+
+/* Portátiles: 3 columnas */
+@media (min-width: 1024px){
+  #galeria img{
+    width: 30%;  /* tres por fila */
+    margin: 1.5%;
+  }
+}
+
+/* TV / pantallas grandes: 4 columnas */
+@media (min-width: 1440px){
+  #galeria img{
+    width: 22%;   /* cuatro por fila (22% + márgenes ≈ 100%) */
+    margin: 1%;
+  }
+}
+
+

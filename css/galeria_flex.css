@@ -1,0 +1,72 @@
+:root {
+    --main-color: rgb(91, 91, 243);
+    --second-color: #fa7878;
+    --gap: 16px;
+    --maxw:1400px;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /*1rem 10px*/
+
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Robot", sans-serif;
+
+}
+
+h1 {
+    font-size: 6rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#galeria{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 1rem;
+    justify-content: flex-start;
+}
+
+/* ÍTEMS */
+#galeria img{
+  flex: 1 1 100%;   /* móvil: 1 columna */
+  width: 100%;
+  min-width: 0;     /* permite encoger en flex */
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Tablet: 2 columnas */
+@media (min-width: 768px){
+  #galeria img{ 
+    flex-basis: calc(50% - var(--gap)); 
+  }
+}
+
+/* TV: 4 columnas */
+@media (min-width: 1440px){
+  #galeria img{
+    flex-basis: calc(25% - 16px);
+  }
+}
