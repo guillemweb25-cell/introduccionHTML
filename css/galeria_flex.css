@@ -1,6 +1,8 @@
 :root{
     --main-color:rgb(91, 91, 243);
     --second-color:#fa7878;
+    --gap: 16px;
+    --maxw: 1400px;
 }
 
 html{
@@ -27,50 +29,65 @@ h1{
 }
 
 /*GENERICOS*/
-
 #galeria{
-    padding: 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding:0 1rem;
+    justify-content: center;
 }
 
 #galeria img{
-    width:100%;
+    flex: 1 1 100%;
+    width: 100%;
+    min-width: 0px;
     aspect-ratio: 1/1;
     object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 10px;
+    border-radius: 8px;
     display: block;
-    margin: 1rem auto;
-    max-width: 600px;
 }
 
-/*TABLET 2 COLUMNAS*/
+/* Tablet: 2 columnas */
 @media (min-width: 768px){
-    #galeria{
-        padding: 0 1rem;
-    }
-
     #galeria img{
-        width: 47%;
-        margin: 1rem 1%;
-        display: inline;
-        max-width: none;
+        flex-basis: calc(50% - var(--gap));
     }
 }
 
-/*3 columnas*/
-@media (min-width: 1024px){
-    #galeria img{
-        width: 31%;
-        margin: 0.5rem 1%;
-        display: inline;
-        max-width: none;
-    } 
-}
-
-/* TV / pantallas grandes: 4 columnas */
+/* TV: 4 columnas */
+/* TV: 4 columnas */
 @media (min-width: 1440px){
     #galeria img{
-      width: 22%;   /* cuatro por fila (22% + márgenes ≈ 100%) */
-      margin: 1%;
+      flex-basis: calc(25% - var(--gap));
     }
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
