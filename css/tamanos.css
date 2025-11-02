@@ -5,10 +5,23 @@
 
 html{
     box-sizing: border-box;
+    font-size: 62.5%; /*1rem 10px*/
+
 }
 *,*:before,*:after{
     box-sizing: inherit;
 }
+
+body{
+    font-family: "Raleway", sans-serif;
+    font-size: 1.6rem;
+}
+h1,h2,h3{
+    font-family: "Robot", sans-serif;
+
+}
+
+
 
 /*GLOBALES*/
 a{
@@ -17,14 +30,23 @@ a{
     display: block;
 }
 
+header{
+    font-size: 1rem;
+}
 
-h1{
+header h1{
     text-align: center;
     color: #2c2b2b;
+    font-size: 4rem;
+    
+}
+header p{
+    font-size: 1em;
 }
 
 h2{
     text-align: center;
+    font-size: 3rem;
 }
 
 span{
