@@ -1,0 +1,74 @@
+:root{
+    --main-color:rgb(91, 91, 243);
+    --second-color:#fa7878;
+    --gap: 16px;
+    --maxw: 1400px;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /*1rem 10px*/
+
+}
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: "Raleway", sans-serif;
+    font-size: 1.6rem;
+}
+h1,h2,h3{
+    font-family: "Robot", sans-serif;
+
+}
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/*estilos grid*/
+
+/* Contenedor */
+#galeria{
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: 1fr;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+#galeria img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Tablet: 2 columnas */
+@media (min-width: 768px){
+  #galeria{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+/* Portátil: 3 columnas */
+@media (min-width: 1024px){
+    #galeria{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+/* TV / pantallas grandes: 4 columnas */
+@media (min-width: 1440px){
+  #galeria{
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+
+
